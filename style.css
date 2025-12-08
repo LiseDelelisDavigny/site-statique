@@ -5,63 +5,118 @@
     --second-blue: #15B7E2;
 }
 
-*{
-    font-family: "Montserrat", sans-serif;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Monserrat", sans-serif;
 }
 
+/* --- Navigation --- */
 nav {
     background-color: var(--main-blue);
     height: 80px;
     display: flex;
     align-items: center;
+    padding: 0;
 }
 
+/* --- Logo  --- */
 nav img {
-    width: 84px;
+    width: 84px; 
     height: 31px;
-    margin-left: 98px;
+    margin-left: 98px; 
+    position: relative;
+    margin-left: 80px;
 }
 
+/* --- Les Formations --- */
 nav .formation {
-    color: #FFFFFF;
-    margin-left: 168px;
-    letter-spacing: -1.5%;
+    margin-left: 200px;
+    color: var(--white);
+    letter-spacing: -1.5%; 
     font-size: 15px;
     font-weight: 500;
 }
 
+/* --- Barre de Recherche --- */
 .search {
-    margin-left: 342px;
+    margin-left: 200px;
     border: 1px solid var(--white);
     display: flex;
     align-items: center;
     border-radius: 6px;
     height: 40px;
+    width: 477px;
+    padding: 0 10px;
 }
 
 .search p {
-    margin-left: 342;
+    color: var(--white);
     font-weight: 500;
     font-size: 15px;
     letter-spacing: -1.5%;
+    margin-left: 0; 
     width: auto;
+    flex-grow: 1; 
 }
 
 .search i {
-    color: white;
-    width: auto;
-    height: auto;
+    color: var(--white);
+    margin-left: 10px; 
 }
 
+/* --- Bouton Connexion --- */
+.connexion {
+    margin-left: 220px;
+    width: 130px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-blue);
+    background-color: var(--white);
+    margin-right: 10px
+}
 
+.connexion p {
+    font-weight: 500; 
+    font-size: 15px;
+    letter-spacing: -1.5%; 
+
+}
+
+/* --- Bouton Inscription --- */
 .inscription {
     background: linear-gradient(to right, var(--main-green), var(--second-blue));
     width: 130px;
     height: 40px;
     border-radius: 6px;
+    display: flex; 
+    justify-content: center;
     align-items: center;
     color: var(--main-blue);
+}
+
+.inscription p {
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -1.5%; 
+}
+
+/* ------------------------------ */
+/* ---------- HERO -------------- */
+/* ------------------------------ */
+
+.hero {
+    height: 450px;
+    background-image: linear-gradient(to left, var(--main-green), var(--second-blue), url('img/img-course.png'));
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
