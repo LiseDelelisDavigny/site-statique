@@ -17,7 +17,7 @@ nav {
     height: 80px;
     display: flex;
     align-items: center;
-    padding: 0;
+    padding: 0 5%;
 }
 
 /* --- Logo  --- */
@@ -66,45 +66,32 @@ nav .formation {
     margin-left: 10px; 
 }
 
-/* --- Bouton Connexion --- */
-.connexion {
+/* --- Boutons --- */
+.connexion, .inscription {
     position: relative;
     left: 39%;
+
     width: 130px;
     height: 40px;
     border-radius: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--main-blue);
-    background-color: var(--white);
-}
 
-.connexion p {
     font-weight: 500; 
     font-size: 15px;
     letter-spacing: -0.015em;
 
-}
-
-/* --- Bouton Inscription --- */
-.inscription {
-    position: relative;
-    left: 40%;
-    background: linear-gradient(to right, var(--main-green), var(--second-blue));
-    width: 130px;
-    height: 40px;
-    border-radius: 6px;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
     color: var(--main-blue);
 }
 
-.inscription p {
-    font-weight: 500;
-    font-size: 15px;
-    letter-spacing: -0.015em;
+.connexion {
+    background-color: var(--white);
+}
+
+.inscription {
+    left: 40%;
+    background: linear-gradient(to right, var(--main-green), var(--second-blue));
 }
 
 /* ------------------------------ */
@@ -183,7 +170,7 @@ nav .formation {
     letter-spacing: -0.015em;
 }
 
-.form-populaire .cards {
+.cards {
     position: absolute;
     top: 21.5%;
 
@@ -196,16 +183,16 @@ nav .formation {
     grid-column-gap: 5.3%;
 }
 
-.form-populaire .cards .card {
+.cards .card {
     position: relative;
     width: 100%;
 }
 
 /* --- Formation Card Prix --- */
 
-.form-populaire .cards .price {
+.cards .price {
     position: absolute;
-    bottom: 180px;
+    bottom: 160px;
     right: 0;
     background-color: var(--main-blue);
     border-radius: 93px;
@@ -214,32 +201,30 @@ nav .formation {
     display: flex;
     align-items: center;
     gap: 10px;
+    box-shadow: 5px 4px 13.2px #1522375a;
 }
-
-.form-populaire .price .promo {
+.price .promo {
     font-size: 20px;
     font-weight: 800;
-}
+} 
 
-.form-populaire .price .real {
+.price .real {
     text-decoration: line-through;
     font-size: 10px;
     font-weight: 400;
 }
 
-.form-populaire .text {
+.text {
     color: var(--main-blue);
     margin: 20px;
 }
-
-.form-populaire .text h2 {
+.text h2 {
     font-weight: 700;
     font-size: 24px;
     letter-spacing: -0.015em;
     padding-bottom: 10px;
 }
-
-.form-populaire .text .coach {
+.text .coach {
     font-weight: 400;
     font-size: 16px;
     padding-bottom: 10px;
@@ -254,4 +239,53 @@ nav .formation {
 span .fa-star {
     color: #FFC7004D;
     height: 20px;
+}
+
+.btn-formation {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 13.4%;
+    background-color: var(--main-blue);
+    color: #FFFFFF;
+    border-radius: 6px;
+}
+
+/* --- Formations recentes --- */
+
+.form-recente {
+    height: 632px;
+    background-color: var(--main-blue);
+    position: relative;
+}
+
+
+.form-recente h1 {
+    position: absolute;
+    top: 5.5%;
+    left: 4.77%;
+
+    font-weight: 800;
+    font-size: 36px;
+    letter-spacing: -0.015em;
+    color: #FFFFFF;
+}
+
+.form-recente .text {
+    color: #FFFFFF;
+}
+
+.form-recente .price {
+    color: var(--main-blue);
+    background-color: #FFFFFF;
+}
+
+.form-recente .btn-formation {
+    color: var(--main-blue);
+    background-color: #FFFFFF;
 }
