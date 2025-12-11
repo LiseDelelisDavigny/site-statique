@@ -157,26 +157,10 @@ nav .formation {
 }
 
 
+ /* ---------------------------------------------- */
+/* ---------- CARDS FORMATIONS -------------- */
 /* ---------------------------------------------- */
-/* ---------- FORMULAIRE POPULAIRE -------------- */
-/* ---------------------------------------------- */ 
 
-.form-populaire {
-    height: 632px;
-    background-color: #FFFFFF;
-    position: relative;
-}
-
-.form-populaire h2 {
-    position: absolute;
-    top: 5.5%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    font-weight: 800;
-    font-size: 36px;
-    letter-spacing: -0.015em;
-}
 
 .cards {
     position: absolute;
@@ -194,6 +178,7 @@ nav .formation {
 .cards .card {
     position: relative;
     width: 100%;
+    height: 365px;
 }
 
 /* --- Formation Card Prix --- */
@@ -268,6 +253,27 @@ span .fa-star {
     border-radius: 6px;
 }
 
+/* ---------------------------------------------- */
+/* ---------- FORMULAIRE POPULAIRE -------------- */
+/* ---------------------------------------------- */
+
+.form-populaire {
+    height: 632px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.form-populaire h2 {
+    position: absolute;
+    top: 5.5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-weight: 800;
+    font-size: 36px;
+    letter-spacing: -0.015em;
+}
+
 /* --- Formations recentes --- */
 
 .form-recente {
@@ -321,4 +327,44 @@ span .fa-star {
     font-weight: 900;
     font-size: 40px;
     letter-spacing: -0.015em;
+}
+
+.customers .text {
+    
+}
+
+.customers {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 10rem;
+}
+
+.customers img {
+    border-radius: 50%;
+    width: 139px;
+}
+
+.customers h3 {
+    padding: 2px 0px;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.015em;
+}
+
+.customers p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.customers .fa-star {
+    color: red;
+    height: 20px;
+    padding-bottom: 10px;
+}
+
+.customer {
+    width: 41%;
 }
