@@ -25,30 +25,27 @@ nav {
     display: flex;
     align-items: center;
     padding: 0 5%;
+    justify-content: space-between;
 }
 
 /* --- Logo  --- */
 nav img {
     width: 84px; 
     height: 31px;
-    position: relative;
     left: 6%;
 }
 
 /* --- Les Formations --- */
 nav .formation {
-    position: relative;
-    left: 14.8%;
     color: var(--white);
     letter-spacing: -0.015em;
     font-size: 15px;
     font-weight: 500;
+    white-space: nowrap;
 }
 
 /* --- Barre de Recherche --- */
 .search {
-    position: relative;
-    left: 25%;
     border: 1px solid var(--white);
     display: flex;
     align-items: center;
@@ -74,10 +71,15 @@ nav .formation {
 }
 
 /* --- Boutons --- */
-.connexion, .inscription {
-    position: relative;
-    left: 39%;
 
+nav .btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.connexion, .inscription {
     width: 130px;
     height: 40px;
     border-radius: 6px;
@@ -97,8 +99,30 @@ nav .formation {
 }
 
 .inscription {
-    left: 40%;
     background: linear-gradient(to right, var(--main-green), var(--second-blue));
+}
+
+.toggle_btn {
+    display: none;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    .formation,
+    .search,
+    .connexion,
+    .inscription {
+        display: none;
+    }
 }
 
 /* ------------------------------ */
@@ -117,32 +141,32 @@ nav .formation {
     align-items: center;
     text-align: center;
     position: relative;
+    gap: 20px;
 }
 
 .hero h1 {
-    position: absolute;
     top: 150px;
     font-size: 48px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: -0.015em;
+    color: #152237;
 }
 
 .hero h2 {
-    position: absolute;
     top: 220px;
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: -0.015em;
+    color: #152237;
 
 }
 /* --- Bouton En Savoir Plus --- */
 .hero .btn-en-savoir {
-    position: absolute;
     top: 58%;
     height: 8.9%;
-    width: 7.8%;
+    width: 8rem;
     background-color: #FFFFFF;
     border-radius: 6px;
     display: flex;
@@ -157,35 +181,31 @@ nav .formation {
 }
 
 
- /* ---------------------------------------------- */
+/* ----------------------------------------- */
 /* ---------- CARDS FORMATIONS -------------- */
-/* ---------------------------------------------- */
+/* ------------------------------------------ */
 
 
 .cards {
-    position: absolute;
-    top: 21.5%;
-    left: 50%;
-    transform: translateX(-50%);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 60px;
+    padding-top: 40px;
 }
 
 .cards .card {
+    width: 305px;
+    height: auto;
     position: relative;
-    width: 100%;
-    height: 365px;
 }
 
 /* --- Formation Card Prix --- */
 
 .cards .price {
     position: absolute;
-    top: 47.3%;
+    top: 180px;
     display: flex;
     align-items: center;
     right: 0;
@@ -210,7 +230,7 @@ nav .formation {
 
 .text {
     color: var(--main-blue);
-    margin: 20px;
+    padding: 20px;
 }
 
 .text h2 {
@@ -239,18 +259,15 @@ span .fa-star {
 }
 
 .btn-formation {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    width: 200px;
     height: 40px;
-    width: 13.4%;
-    background-color: var(--main-blue);
-    color: #FFFFFF;
     border-radius: 6px;
+    margin: 50px auto;
 }
 
 /* ---------------------------------------------- */
@@ -258,43 +275,41 @@ span .fa-star {
 /* ---------------------------------------------- */
 
 .form-populaire {
-    height: 632px;
+    height: 69rem;
+    margin-top: auto;
     background-color: #FFFFFF;
-    position: relative;
 }
 
 .form-populaire h2 {
-    position: absolute;
-    top: 5.5%;
-    left: 50%;
-    transform: translateX(-50%);
-
+    padding-top: 30px;
+    text-align: left;
+    padding-left: 165px;
     font-weight: 800;
     font-size: 36px;
     letter-spacing: -0.015em;
+}
+
+.form-populaire .btn-formation {
+    background-color: #152237;
+    color: white;
 }
 
 /* --- Formations recentes --- */
 
 .form-recente {
-    height: 632px;
+    height: 69rem;
+    margin-top: auto;
     background-color: var(--main-blue);
-    position: relative;
-    
 }
 
-
 .form-recente h2 {
-    position: absolute;
-    top: 5.5%;
-    left: 50%;
-    transform: translateX(-50%);
-
-
+    padding-top: 30px;
+    text-align: left;
+    padding-left: 165px;
     font-weight: 800;
     font-size: 36px;
     letter-spacing: -0.015em;
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 .form-recente .text {
@@ -310,36 +325,36 @@ span .fa-star {
     color: var(--main-blue);
     background-color: #FFFFFF;
 }
+
 /* -------------------------- */
 /* ------ AVIS CLIENTS ------ */
 /* -------------------------- */
 
 .avis {
-    height: 597px;
-    background-color: #FFFFFF;
+    height: auto;
+    background-color: #ffffff;
 }
 
-.avis-client {
+.avis-client h2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
-
     font-weight: 900;
     font-size: 40px;
     letter-spacing: -0.015em;
+    justify-content: center;
+    padding-top: 4rem;
+    text-transform: uppercase;
 }
-
 .customers .text {
     
 }
 
 .customers {
     display: flex;
-    margin: auto;
+    
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding-top: 10rem;
+    gap: 1rem;
+    padding: 9.3rem;
 }
 
 .customers img {
@@ -360,8 +375,9 @@ span .fa-star {
 }
 
 .customers .fa-star {
-    color: red;
+    color: #FFC700;
     height: 20px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
