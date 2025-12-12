@@ -275,9 +275,10 @@ span .fa-star {
 /* ---------------------------------------------- */
 
 .form-populaire {
-    height: 69rem;
+    height: auto;
     margin-top: auto;
     background-color: #FFFFFF;
+    padding: 1;
 }
 
 .form-populaire h2 {
@@ -297,9 +298,10 @@ span .fa-star {
 /* --- Formations recentes --- */
 
 .form-recente {
-    height: 69rem;
+    height: auto;
     margin-top: auto;
     background-color: var(--main-blue);
+    padding: 1px;
 }
 
 .form-recente h2 {
@@ -344,9 +346,6 @@ span .fa-star {
     padding-top: 4rem;
     text-transform: uppercase;
 }
-.customers .text {
-    
-}
 
 .customers {
     display: flex;
@@ -384,3 +383,85 @@ span .fa-star {
 .customer {
     width: 41%;
 }
+
+/* ---------------------------------------------- */
+/* ------------------ AVANTAGES ----------------- */
+/* ---------------------------------------------- */
+
+.avantages {
+    height: auto;
+    background-color: #F5F5F5;
+    display: flex;
+    width: 100%;
+
+    flex-wrap: wrap;
+}
+
+.container-avantages h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: -0.015em;
+    padding: 4rem;
+    text-align: start;
+}
+
+.img-avantages {
+    padding-left: 8rem;
+    width: 45rem;
+    height: 29.5rem;
+}
+
+
+.text-avantages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 4.75rem;
+}
+
+
+.text-avantages ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+    list-style: none; 
+    padding-left: 2rem;
+    
+    height: 295px; 
+    width: 616px; 
+}
+
+.text-avantages li {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+    height: auto;
+}
+
+/* ::before va creer un "faux élément" enfant qui se place juste avt le contenu réél de l'élém parent  */
+
+.li-1::before, .li-2::before, .li-3::before, 
+.li-4::before, .li-5::before, .li-6::before {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+
+    width: 24px;
+    height: 24px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.li-1::before { background-image: url(img/arrow.svg); padding-left: 28px;}
+.li-2::before { background-image: url(img/edit.svg); padding-left: 29px;}
+.li-3::before { background-image: url(img/download.svg); padding-left: 28px;}
+.li-4::before { background-image: url(img/star.svg); padding-left: 28px;}
+.li-5::before { background-image: url(img/clock.svg); padding-left: 28px;}
+.li-6::before { background-image: url(img/annotation.svg); padding-left: 28px;}
