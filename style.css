@@ -349,7 +349,7 @@ span .fa-star {
 
 .customers {
     display: flex;
-    
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -384,6 +384,19 @@ span .fa-star {
     width: 41%;
 }
 
+@media screen and (max-width: 1100px){
+    .avis-client {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .customers {
+        padding: auto;
+    }
+    
+}
+
 /* ---------------------------------------------- */
 /* ------------------ AVANTAGES ----------------- */
 /* ---------------------------------------------- */
@@ -392,12 +405,12 @@ span .fa-star {
     height: auto;
     background-color: #F5F5F5;
     display: flex;
-    width: 100%;
+    width: auto;
 
     flex-wrap: wrap;
 }
 
-.container-avantages h2 {
+.avantages h2 {
     text-transform: uppercase;
     font-weight: 900;
     font-size: 40px;
@@ -406,14 +419,12 @@ span .fa-star {
     text-align: start;
 }
 
-.img-avantages {
+.avantages img {
     padding-left: 8rem;
-    width: 45rem;
-    height: 29.5rem;
 }
 
 
-.text-avantages {
+.container-avantages {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -422,25 +433,21 @@ span .fa-star {
 }
 
 
-.text-avantages ul {
+.conatiner-avantages ul {
     display: flex;
+    list-style: none;
+    padding: 0;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    
-    list-style: none; 
-    padding-left: 2rem;
-    
-    height: 295px; 
-    width: 616px; 
+    gap: 1.5rem;
 }
 
-.text-avantages li {
+.container-avantages li {
     display: flex;
     align-items: center;
     width: 100%;
     
     height: auto;
+    gap: 0.5rem;
 }
 
 /* ::before va creer un "faux élément" enfant qui se place juste avt le contenu réél de l'élém parent  */
@@ -451,8 +458,8 @@ span .fa-star {
     display: block;
     flex-shrink: 0;
 
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 
     background-size: contain;
     background-repeat: no-repeat;
@@ -465,3 +472,147 @@ span .fa-star {
 .li-4::before { background-image: url(img/star.svg); padding-left: 28px;}
 .li-5::before { background-image: url(img/clock.svg); padding-left: 28px;}
 .li-6::before { background-image: url(img/annotation.svg); padding-left: 28px;}
+
+
+@media screen and (max-width: 1100px) {
+    
+    .container-avantages {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .avantages img {
+        padding-left: 0;
+        margin-top: 2rem;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container-avantages h2 {
+        padding: 2rem;
+        text-align: center;
+    }
+}
+
+
+/* -------------------------------------------------------- */
+/* ------------------ AVANTAGES FORMATION ----------------- */
+/* -------------------------------------------------------- */
+
+
+
+
+.section-adv-f {
+    background-color: var(--main-green);
+    width: auto;
+    padding: 4rem 0;
+}
+
+.adv-f-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 4rem;
+}
+
+.adv-f-img {
+    flex: 1;
+    padding: 0 4rem 0 2rem;
+    width: 100%;
+}
+
+.adv-f-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.adv-f-content h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 40px;
+    margin-bottom: 4rem;
+    color: var(--main-blue);
+    line-height: 36px;
+    letter-spacing: -0.015rem;
+}
+
+.adv-f-content ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.adv-f-content li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    color: var(--main-blue);
+    font-weight: 200;
+    font-size: 1.2rem;
+    letter-spacing: -0.015rem;
+}
+
+.li-7::before, .li-8::before, .li-9::before, 
+.li-10::before, .li-11::before {
+    content: '';
+    display: block;
+    flex-shrink: 0;
+
+    width: 20px;
+    height: 20px;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.li-7::before { background-image: url(img/coin-hand.svg)}
+.li-8::before { background-image: url(img/heart.svg)}
+.li-9::before { background-image: url(img/pencil.svg)}
+.li-10::before { background-image: url(img/settings.svg)}
+.li-11::before { background-image: url(img/user-profile.svg)}
+
+@media screen and (max-width: 1000px){
+    .adv-f-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .adv-f-content {
+        display: contents;
+        padding: 2rem;
+        text-align: start;
+    }
+
+    .adv-f-img {
+        order: 2;
+        padding: 2rem;
+        max-width: 80%;
+    }
+    
+    .adv-f-content h2 {
+        order: 1;
+        text-align: center;
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    .adv-f-content ul {
+        order: 3;
+        padding: 0 2rem 3rem 2rem; 
+    }
+    .avc-klivio {
+        display: none;
+    }
+}
