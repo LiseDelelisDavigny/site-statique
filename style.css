@@ -151,6 +151,7 @@ nav .btn {
     text-transform: uppercase;
     letter-spacing: -0.015em;
     color: #152237;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .hero h2 {
@@ -160,7 +161,7 @@ nav .btn {
     text-transform: uppercase;
     letter-spacing: -0.015em;
     color: #152237;
-
+    font-family: 'Montserrat', sans-serif;
 }
 /* --- Bouton En Savoir Plus --- */
 .hero .btn-en-savoir {
@@ -178,6 +179,7 @@ nav .btn {
     font-weight: 500;
     font-size: 15px;
     letter-spacing: -0.015em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -220,12 +222,14 @@ nav .btn {
 .price .promo {
     font-size: 20px;
     font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
 } 
 
 .price .real {
     text-decoration: line-through;
     font-size: 10px;
     font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text {
@@ -238,13 +242,14 @@ nav .btn {
     font-size: 24px;
     letter-spacing: -0.015em;
     padding-bottom: 10px;
-
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text .coach {
     font-weight: 400;
     font-size: 16px;
     padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .fa-star {
@@ -287,12 +292,14 @@ span .fa-star {
     padding-left: 165px;
     font-weight: 800;
     font-size: 36px;
+    font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.015em;
 }
 
 .form-populaire .btn-formation {
     background-color: #152237;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* --- Formations recentes --- */
@@ -312,15 +319,18 @@ span .fa-star {
     font-size: 36px;
     letter-spacing: -0.015em;
     color: var(--white);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form-recente .text {
     color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form-recente .price {
     color: var(--main-blue);
     background-color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .form-recente .btn-formation {
@@ -368,6 +378,7 @@ span .fa-star {
     justify-content: center;
     padding: 4rem;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .customers {
@@ -388,12 +399,14 @@ span .fa-star {
     font-weight: 700;
     font-size: 24px;
     letter-spacing: -0.015em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .customers p {
     font-weight: 400;
     font-size: 16px;
     word-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .customers .fa-star {
@@ -460,6 +473,8 @@ span .fa-star {
     letter-spacing: -0.015em;
     text-align: start;
     padding-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 .avantages img {
@@ -532,7 +547,7 @@ span .fa-star {
     }
 
     .avantages img {
-        padding-left: 0;
+        padding-left: 0rem;
         margin-top: 2rem;
         width: 80%;
         height: auto;
@@ -580,7 +595,6 @@ span .fa-star {
     align-items: center;
     justify-content: center;
 
-    width: 100%;
     padding: 3.75rem;
     gap: 2rem;
     overflow-x: hidden;
@@ -606,6 +620,7 @@ span .fa-star {
     color: var(--main-blue);
     line-height: 36px;
     letter-spacing: -0.015rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .adv-f-content ul {
@@ -639,6 +654,10 @@ span .fa-star {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.avc-klivio {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .li-7::before { background-image: url(img/coin-hand.svg)}
@@ -682,7 +701,6 @@ span .fa-star {
     }
 
     .adv-f-content li {
-        font-weight: 200;
         font-size: 20px;
         line-height: 28px;
         gap: 2rem;
@@ -700,3 +718,171 @@ span .fa-star {
 /* ------------------ A PROPOS ------------------ */
 /* ---------------------------------------------- */
 
+.section-propos {
+    height: auto;
+    background-color: #F5F5F5;
+}
+
+.container-propos {
+    display: flex;
+}
+
+.text-propos {
+    padding: 11rem 6rem;
+    width: 50%;
+}
+
+.text-propos h2 {
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: -0.015rem;
+    line-height: 36px;
+    color: var(--main-blue);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-propos p {
+    font-size: 18px;
+    font-weight: 400px;
+    line-height: 28px;
+    letter-spacing: -0.015;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.img-propos {
+    background-color: #152237;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-propos img {
+    width: 400px;
+}
+
+@media screen and (max-width: 900px) {
+    .container-propos {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .text-propos {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .text-propos h2 {
+        justify-content: center;
+        text-align: center;
+        padding: 3rem 3rem 0 3rem;
+    }
+
+    .text-propos p {
+        display: flex;
+        padding: 3rem 1rem;
+        justify-content: center;
+    }
+
+    .img-propos {
+        width: 100%;
+    }
+
+    .img-propos img {
+        padding: 10rem 0;
+    }
+
+}
+
+/* -------------------------------------------- */
+/* ------------------ CONTACT ----------------- */
+/* -------------------------------------------- */
+
+.container-contact {
+    height: auto;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    padding: 2rem;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 18px;
+}
+
+.border-contact {
+    border-bottom: solid 1px var(--main-green);
+    width: 20%;
+}
+
+.inputs-contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.flex-input-contact {
+    padding: 3rem 11.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 7rem;
+}
+
+.flex-input-contact input{
+    display: flex;
+    padding: 0.5rem;
+    width: 36rem;
+    background-color: var(--main-blue);
+    border: none;
+    color: var(--white);
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.textarea-contact {
+    padding: 1rem 11rem;
+}
+.message-area {
+    width: 100%;
+    height: 12rem;
+    padding: 1rem;
+    background-color: var(--main-blue);
+    border: none;
+    color: var(--white);
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    resize: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .flex-input-contact {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+    }
+
+    .textarea-contact {
+        padding: 0;
+        display: flex;
+    }
+
+    .message-area {
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+}
