@@ -328,6 +328,29 @@ span .fa-star {
     background-color: #FFFFFF;
 }
 
+@media screen and (max-width: 900px) {
+
+    .form-populaire {
+        padding: 1rem;
+    }
+    .form-populaire h2 {
+        padding-left: 0;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .form-recente {
+        padding: 1rem;
+    }
+    .form-recente h2 {
+        padding-left: 0;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+}
+
 /* -------------------------- */
 /* ------ AVIS CLIENTS ------ */
 /* -------------------------- */
@@ -343,7 +366,7 @@ span .fa-star {
     font-size: 40px;
     letter-spacing: -0.015em;
     justify-content: center;
-    padding-top: 4rem;
+    padding: 4rem;
     text-transform: uppercase;
 }
 
@@ -353,7 +376,6 @@ span .fa-star {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    padding: 9.3rem;
 }
 
 .customers img {
@@ -371,6 +393,7 @@ span .fa-star {
 .customers p {
     font-weight: 400;
     font-size: 16px;
+    word-spacing: 2px;
 }
 
 .customers .fa-star {
@@ -382,6 +405,7 @@ span .fa-star {
 
 .customer {
     width: 41%;
+    padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 1100px){
@@ -389,10 +413,31 @@ span .fa-star {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        display: contents;
+        padding: 0;
     }
 
     .customers {
+        display: flex;
+        justify-content: center;
         padding: auto;
+        flex-direction: column;
+    }
+
+
+    .customer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .customer .text p{
+        width: 100%;
+        justify-self: center;
+        justify-content: center;
     }
     
 }
@@ -404,50 +449,53 @@ span .fa-star {
 .avantages {
     height: auto;
     background-color: #F5F5F5;
-    display: flex;
-    width: auto;
-
+    width: 100%;
     flex-wrap: wrap;
 }
 
 .avantages h2 {
     text-transform: uppercase;
     font-weight: 900;
-    font-size: 40px;
+    font-size: 30px;
     letter-spacing: -0.015em;
-    padding: 4rem;
     text-align: start;
+    padding-bottom: 2rem;
 }
 
 .avantages img {
     padding-left: 8rem;
 }
 
-
 .container-avantages {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 3rem;
-    padding: 4.75rem;
+    justify-content: center;
+
+    width: 100%;
+    padding: 3.75rem;
+    gap: 2rem;
+    overflow-x: hidden;
 }
 
-
-.conatiner-avantages ul {
+.container-avantages ul {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
     flex-direction: column;
     gap: 1.5rem;
 }
 
 .container-avantages li {
     display: flex;
-    align-items: center;
-    width: 100%;
-    
-    height: auto;
     gap: 0.5rem;
+    align-items: flex-start;
+    color: var(--main-blue);
+    font-weight: 400;
+    font-size: 1.2rem;
+    letter-spacing: -0.015rem;
 }
 
 /* ::before va creer un "faux élément" enfant qui se place juste avt le contenu réél de l'élém parent  */
@@ -466,12 +514,12 @@ span .fa-star {
     background-position: center;
 }
 
-.li-1::before { background-image: url(img/arrow.svg); padding-left: 28px;}
-.li-2::before { background-image: url(img/edit.svg); padding-left: 29px;}
-.li-3::before { background-image: url(img/download.svg); padding-left: 28px;}
-.li-4::before { background-image: url(img/star.svg); padding-left: 28px;}
-.li-5::before { background-image: url(img/clock.svg); padding-left: 28px;}
-.li-6::before { background-image: url(img/annotation.svg); padding-left: 28px;}
+.li-1::before { background-image: url(img/arrow.svg);}
+.li-2::before { background-image: url(img/edit.svg);}
+.li-3::before { background-image: url(img/download.svg);}
+.li-4::before { background-image: url(img/star.svg);}
+.li-5::before { background-image: url(img/clock.svg);}
+.li-6::before { background-image: url(img/annotation.svg)}
 
 
 @media screen and (max-width: 1100px) {
@@ -480,33 +528,49 @@ span .fa-star {
         flex-direction: column;
         align-items: center;
         justify-content: center; 
+        padding: 0rem;
     }
 
     .avantages img {
         padding-left: 0;
         margin-top: 2rem;
-        max-width: 100%;
+        width: 80%;
         height: auto;
+        padding-bottom: 3rem;
+
     }
 
     .container-avantages h2 {
         padding: 2rem;
         text-align: center;
     }
+
+    .container-avantages ul {
+        padding: 2rem;
+    }
+
+    .container-avantages li {
+
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 28px;
+        gap: 2rem;
+
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    
 }
 
-
 /* -------------------------------------------------------- */
-/* ------------------ AVANTAGES FORMATION ----------------- */
+/* ------------------ AVANTAGES FROMATION ----------------- */
 /* -------------------------------------------------------- */
-
-
-
-
+ 
 .section-adv-f {
     background-color: var(--main-green);
     width: auto;
-    padding: 4rem 0;
+    height: auto;
 }
 
 .adv-f-wrapper {
@@ -515,18 +579,19 @@ span .fa-star {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+
     width: 100%;
-    padding: 4rem;
+    padding: 3.75rem;
+    gap: 2rem;
+    overflow-x: hidden;
 }
 
 .adv-f-img {
     flex: 1;
-    padding: 0 4rem 0 2rem;
     width: 100%;
 }
 
 .adv-f-content {
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -557,7 +622,7 @@ span .fa-star {
     gap: 0.5rem;
     align-items: flex-start;
     color: var(--main-blue);
-    font-weight: 200;
+    font-weight: 400;
     font-size: 1.2rem;
     letter-spacing: -0.015rem;
 }
@@ -585,34 +650,53 @@ span .fa-star {
 @media screen and (max-width: 1000px){
     .adv-f-wrapper {
         flex-direction: column;
-        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
     }
     
     .adv-f-content {
         display: contents;
-        padding: 2rem;
         text-align: start;
     }
 
     .adv-f-img {
         order: 2;
-        padding: 2rem;
+        justify-content: center;
+        align-items: center;
         max-width: 80%;
     }
     
     .adv-f-content h2 {
         order: 1;
         text-align: center;
-        margin-bottom: 1rem;
+        margin-bottom: 0rem;
         margin-top: 2rem;
         padding: 0 1rem;
+        font-weight: 1200;
     }
 
     .adv-f-content ul {
         order: 3;
-        padding: 0 2rem 3rem 2rem; 
+        padding: 2rem;
     }
+
+    .adv-f-content li {
+        font-weight: 200;
+        font-size: 20px;
+        line-height: 28px;
+        gap: 2rem;
+
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
     .avc-klivio {
         display: none;
     }
 }
+
+/* ---------------------------------------------- */
+/* ------------------ A PROPOS ------------------ */
+/* ---------------------------------------------- */
+
